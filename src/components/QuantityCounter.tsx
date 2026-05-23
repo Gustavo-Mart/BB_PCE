@@ -1,30 +1,34 @@
-import { useState } from 'react'
+import { Minus, Plus } from 'lucide-react';
 
-export default function QuantityCounter({ initial = 1, min = 1, max = 99 }: {
-  initial?: number
-  min?: number
-  max?: number
+export default function QuantityCounter({
+  qty,
+  onChange,
+  min = 1,
+  max = 99
+}: {
+  qty: number;
+  onChange: (newQty: number) => void;
+  min?: number;
+  max?: number;
 }) {
-  const [qty, setQty] = useState(initial)
-
   return (
-    <div className='flex items-center border border-primary/30 rounded-lg overflow-hidden w-fit font-serif bg-primary/70'>
+    <div className='flex items-center gap-3 bg-white rounded-full px-1 py-1 border border-text-primary/10 text-text-primary shadow-sm w-fit'>
       <button
-        onClick={() => setQty(q => Math.max(min, q - 1))}
-        className='px-4 py-2 text-xl text-text-secondary hover:text-text-primary hover:bg-background/30 transition-all '
+        onClick={() => onChange(Math.max(min, qty - 1))}
+        className='p-1.5 hover:bg-background rounded-full transition-colors text-text-primary/50 hover:text-text-primary'
       >
-        −
+        <Minus size={14} />
       </button>
 
-      <span className='px-4 py-2 text-lg text-text-primary select-none min-w-8 text-center'>
-        {qty}
+      <span className='font-semibold text-sm w-4 text-center select-none'>
+        {qty.toString().padStart(2, '0')}
       </span>
 
       <button
-        onClick={() => setQty(q => Math.min(max, q + 1))}
-        className='px-4 py-2 text-xl text-text-secondary hover:text-text-primary hover:bg-background/30 transition-all'
+        onClick={() => onChange(Math.min(max, qty + 1))}
+        className='p-1.5 hover:bg-background rounded-full transition-colors text-text-primary/50 hover:text-text-primary'
       >
-        +
+        <Plus size={14} />
       </button>
     </div>
   )

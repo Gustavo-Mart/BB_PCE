@@ -5,6 +5,7 @@ import Section from './Section'
 import Login from './Login'
 import CartSection from './Cart'
 import Colecao from './Colecao'
+import Footer from '../components/Footer'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/cart" element={<CartSection />} />
         <Route path="/colecao" element={<Colecao />} />
       </Routes>
+      <Footer />
     </div>
   )
 }
