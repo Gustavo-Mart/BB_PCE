@@ -152,8 +152,8 @@ export default function ParallaxGallery() {
           <div
             key={i}
             className="shrink-0 rounded-2xl overflow-hidden
-              w-64 h-64
-              sm:w-60 sm:h-80
+              w-64 h-120
+              sm:w-60 sm:h-96
               lg:w-96 lg:h-[70vh]"
           >
             <img

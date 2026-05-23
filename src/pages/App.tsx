@@ -4,7 +4,6 @@ import MenuBar from '../components/MenuBar'
 import Section from './Section'
 import Login from './Login'
 import CartSection from './Cart'
-import Scroller from '../components/Scroller'
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<CartSection />} />
       </Routes>
-      <Scroller />
     </div>
   )
 }
