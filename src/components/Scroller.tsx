@@ -134,7 +134,7 @@ export default function ParallaxGallery() {
   const onTouchEnd = () => onDragEnd()
 
   return (
-    <div className="bg-background w-full h-screen flex items-center overflow-hidden">
+    <div className="bg-background w-full h-fit py-8 flex items-center overflow-hidden">
       <div
         ref={trackRef}
         onMouseDown={onMouseDown}
@@ -154,7 +154,7 @@ export default function ParallaxGallery() {
             className="shrink-0 rounded-2xl overflow-hidden
               w-64 h-120
               sm:w-60 sm:h-96
-              lg:w-96 lg:h-[70vh]"
+              lg:w-96 lg:h-[50vh]"
           >
             <img
               src={src}

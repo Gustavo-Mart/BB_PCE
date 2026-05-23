@@ -4,6 +4,7 @@ import MenuBar from '../components/MenuBar'
 import Section from './Section'
 import Login from './Login'
 import CartSection from './Cart'
+import Colecao from './Colecao'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Section />} />
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<CartSection />} />
+        <Route path="/colecao" element={<Colecao />} />
       </Routes>
     </div>
   )
