@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme{
+  --color-primary: #BD5D78;
+  --color-secondary: #FDE2D5;
+  --color-background: #FBE8EE;
+  --color-text-primary: #0F100B;
+  
+  --font-serif: 'Gelasio', serif;
+}
+
+@utility clip-blob-a {
+  clip-path: path('M 234,47 C 328,16 438,78 469,172 C 500,266 453,375 375,422 C 297,469 172,453 109,391 C 47,328 31,219 78,141 C 125,63 141,78 234,47 Z');
+}
